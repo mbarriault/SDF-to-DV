@@ -1,0 +1,18 @@
+To build, place (or link) the sdftodv binary in the directory, open the Xcode project and build.
+
+At the moment, the application expects a particular directory structure.
+
+data/
+data/run1/
+data/run1/info.txt
+data/run1/file1.sdf
+data/run1/file2.sdfdata/run1/
+data/run2/info.txt
+data/run2/file1.sdf
+data/run2/file2.sdf
+É
+etc.
+
+The "data", "run1","run2",etc folders, and "file1.sdf","file2.sdf",etc files, other than the .sdf extension, can appear as any names, but these runs will only appear if info.txt is found inside (which shows in the main cell). Open the data directory with Choose Folder, runs will be listed on the left. Choose one, click Scan to look for .sdf files, which will be listed on the right. Enter the hostname in the DVHOST field, and Send to DV will transfer the selected .sdf file (the progress spinner will light while the action occurs, but the process happens in a separate thread to prevent freezing the UI). The full command appears in the status bar at the bottom of the window. Refresh will rescan data for run directories. Open Folder, which was placed to open the run folder, is incomplete and does not yet work.
+
+Send any questions to Mike Barriault <mikebarriault@me.com>
